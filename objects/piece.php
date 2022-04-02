@@ -19,16 +19,26 @@ class piece{
         $currentFileIndex = array_search($currentFile, $files);
         $currentRank = $this->position[1];
         $currentRankIndex = array_search($currentRank, $ranks);
+        $goToFileIndex = array_search($pos[0], $files);
+        $goToRankIndex = array_search($pos[1], $ranks);
+
+        if($goToFileIndex <= 0 || $goToFileIndex >= 0){
+            die("This is not a space on the chessboard lmao :) ");
+        }
+
+        if($goToFileIndex == $currentFileIndex && $goToRankIndex == $currentRankIndex){
+            die("The piece didnt move trollolololol");
+        }
 
         switch($this->name){
             case "rook":
-                $this->position = $pos;
+                if($goToFileIndex == $currentFileIndex || $goToRankIndex == $currentRankIndex){
+                    $this->position = $pos;    
+                }
+                
                 break;
             case "knight":
                 //check if one goes 2 up or down and one goes 1 up or down. If thats true then valid.
-                $goToFileIndex = array_search($pos[0], $files);
-                $goToRankIndex = array_search($pos[1], $ranks);
-                
                 if(($goToFileIndex == $currentFileIndex - 2 || $goToFileIndex == $currentFileIndex + 2) && ($goToRankIndex == $currentRankIndex - 1 || $goToRankIndex == $currentRankIndex + 1)){
                     print_r("moved knight to ${$pos}");
                 }
