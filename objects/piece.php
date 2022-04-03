@@ -4,12 +4,15 @@ namespace chess;
 class piece{
     public $name;
     public $position;
+    public $color;
+
     private $_ranks = array(1,2,3,4,5,6,7,8);
     private $_files = array('A','B','C','D','E','F','G','H');
 
-    function __construct($name, $position){
+    function __construct($name, $position, $color){
         $this->name = $name;
         $this->position = $position;
+        $this->color = $color;
     }
 
     public function move($pos){
@@ -122,9 +125,24 @@ class piece{
     }
 
     private function pawnValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex){
-        //TO-DO: Implement pawn validation
+
+        //white moves forward, black moves backwards (: 
+        if(($this->color == "white" && $goToRankIndex + 1) || ($this->color == "black" && $goToRankIndex - 1)){
+            //normal pawn move]
+            return true;
+        }
+        elseif(($goToRankIndex + 2 && $currentRankIndex == 1 && $this->color == "white") || ($goToRankIndex -2 && $currentRankIndex == 6 && $this->color == "black")){
+            return true;
+        }
+        else{
+            return false;
+        }
+
         //TO-DO: Check for captures
-        //TO-DO: Check for promotion
+        if(($this->color == "white" && $goToRankIndex == 7) || ($this->color == "black" && $goToRankIndex == 0)){
+            //TO-DO: Choose piece
+        }
+
         return true;
     }
 
