@@ -78,7 +78,7 @@ class piece{
 
     private function queenValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex){
         //TO-DO: Check for pieces in the way
-
+        //TO-DO: Check for captures
         $bishopValidation = $this->bishopValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex);
         $rookValidation = $this->rookValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex);
 
@@ -92,7 +92,7 @@ class piece{
 
     private function knightValidation($goToFileIndex,$currentFileIndex,$goToRankIndex,$currentRankIndex){
         //TO-DO: Check for pieces in the way
-
+        //TO-DO: Check for captures
         if(($goToFileIndex == $currentFileIndex - 2 || $goToFileIndex == $currentFileIndex + 2) && ($goToRankIndex == $currentRankIndex - 1 || $goToRankIndex == $currentRankIndex + 1)){
             return true;
         }
@@ -107,6 +107,8 @@ class piece{
 
     private function rookValidation($goToFileIndex,$currentFileIndex,$goToRankIndex,$currentRankIndex){
         //TO-DO: Check for pieces in the way
+        //TO-DO: Check for captures
+        //TO-DO: Check for castle
         if($goToFileIndex == $currentFileIndex || $goToRankIndex == $currentRankIndex){
             return true;
         }
@@ -114,17 +116,22 @@ class piece{
     }
 
     private function bishopValidation($goToFileIndex,$currentFileIndex,$goToRankIndex,$currentRankIndex){
-        //TO DO: Implement bishop validation
+        //TO-DO: Implement bishop validation
+        //TO-DO: Check for captures
         return true;
     }
 
     private function pawnValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex){
-        //TO DO: Implement pawn validation
+        //TO-DO: Implement pawn validation
+        //TO-DO: Check for captures
+        //TO-DO: Check for promotion
         return true;
     }
 
     private function kingValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex){
-        //TO DO: Implement king validation
+        //TO-DO: Implement king validation
+        //TO-DO: Check for captures
+        //TO-DO: Check for castle
         return true;
     }
 }
