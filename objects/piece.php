@@ -24,7 +24,7 @@ class piece{
         $goToFileIndex = array_search($pos[0], $this->_files);
         $goToRankIndex = array_search($pos[1],  $this->_ranks);
 
-        if($goToFileIndex <= 0 || $goToFileIndex >= 0){
+        if($goToFileIndex <= 0 || $goToFileIndex >= 7){
             die("This is not a space on the chessboard lmao :) ");
         }
 
