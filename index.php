@@ -3,8 +3,6 @@ namespace chess;
 
 require_once './objects/piece.php';
 
-use chess;
-
 $pieces = [];
 
 
