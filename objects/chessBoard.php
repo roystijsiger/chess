@@ -11,6 +11,9 @@ class ChessBoard{
         foreach($this->_ranks as $rank){
             echo "<tr style='background-color:green; width: 50px; height: 50px'>";
             echo $rank;
+            foreach($this->_files as $file){
+                echo "<td>$file</td>";
+            }
             echo "</tr>";
         }
         echo "</table>";
