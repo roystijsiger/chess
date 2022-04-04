@@ -99,7 +99,7 @@ class ChessBoard{
                        $amountOfNothingFound = 0;
                     }
                     
-                    if($rank != 7){
+                    if($rank < 8){
                         $FEN .= "/";
                     }
                 }
