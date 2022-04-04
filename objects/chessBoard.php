@@ -17,15 +17,14 @@ class ChessBoard{
                 $pieceFound = false;
                 echo "<td>";
                 foreach($this->Pieces as $piece){
-                    echo $file . $rank;
                     if($piece->position == $file . $rank){
                         $pieceFound = true;
-                        echo $piece->name;
+                        echo "${$file}${$rank}: No piece";
                         break;
                     }
                 }
                 if(!$pieceFound){
-                    echo "No piece";
+                    echo "${$file}${$rank}: No piece";
                 }
                 echo "</td>";
             }
