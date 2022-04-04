@@ -7,12 +7,18 @@ class ChessBoard{
     private $_files = array('A','B','C','D','E','F','G','H');
 
     public function Draw(){
+        //for drawing turn around ranks
+        $ranks = array_reverse($this->_ranks);
         echo "<table>";
-        foreach($this->_ranks as $rank){
+        foreach($ranks as $rank){
             echo "<tr style='background-color:green; width: 50px; height: 50px'>";
             echo $rank;
             foreach($this->_files as $file){
-                echo "<td>$file</td>";
+                foreach($this->Pieces as $piece){
+                    if($piece->position == $file . $rank){
+                        echo $piece->name;
+                    }
+                }
             }
             echo "</tr>";
         }
