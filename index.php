@@ -27,9 +27,9 @@ $analysis = $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
 Lines: 
 echo "<ul>";
 foreach($analysis->pvs as $moveVariation){
-    echo "<li>" . $moveVariation->moves . "</li>";
+    echo "<li>" . $moveVariation->moves . " eval: ". $moveVariation->cp / 100 . "</li>";
 }
-echo "</ul>"
+echo "</ul>";
 //echo "best moves: " . $analysis->pvs[0]->moves;
 
 require_once './template/bottom.php';
