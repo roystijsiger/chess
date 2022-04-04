@@ -108,7 +108,7 @@ class ChessBoard{
                 
             }
         }
-        return "{$FEN} {$this->turnOf} {$this->canRokade()} {$this->canEnpassant()} {$this->getMovesWithoutPawnOrCapture()} {$this->getAmountOfMoves()}";
+        return "{$FEN} {$this->whoseTurn()} {$this->canRokade()} {$this->canEnpassant()} {$this->getMovesWithoutPawnOrCapture()} {$this->getAmountOfMoves()}";
     }
 
     public function GetAnalysis($FEN){
@@ -178,7 +178,7 @@ class ChessBoard{
         $this->Pieces = [$rook1,$rook2,$rook3,$rook4,$horse1,$horse2,$horse3,$horse4,$bishop1,$bishop2,$bishop3,$bishop4,$king1,$king2,$queen1,$queen2,$pawn1,$pawn2,$pawn3,$pawn4,$pawn5,$pawn6, $pawn7, $pawn8, $pawn9,$pawn10,$pawn11,$pawn12,$pawn13,$pawn14,$pawn15,$pawn16];
     }
 
-    private function turnOf(){
+    private function whoseTurn(){
         $key = array_key_last($this->Pieces);
         return $this->Pieces[$key]->Color == "white" ? "b" : "w";
     }
