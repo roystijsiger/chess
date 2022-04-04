@@ -65,7 +65,10 @@ class ChessBoard{
                     if($piece->Name == "knight"){
                         $letter = "N";
                     }
-                    $letter = $piece->Name[0];
+                    else{
+                        $letter = $piece->Name[0];
+                    }
+                    
 
                     if($piece->Position == $position){
                         if($amountOfNothingFound > 0){
