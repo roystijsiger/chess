@@ -68,6 +68,12 @@ class ChessBoard{
                     else{
                         $letter = $piece->Name[0];
                     }
+                    if($piece->Color == "white"){
+                        $letter = strtoupper($letter);
+                    }
+                    else{
+                        $letter = strtolower($letter);
+                    }
                     
 
                     if($piece->Position == $position){
