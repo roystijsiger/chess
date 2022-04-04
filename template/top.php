@@ -5,13 +5,13 @@
             table{
                 border:none;
             }
-            
+
             td{
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
                 text-align: center;
                 vertical-align: center;
-                font-size: 50px;
+                font-size: 45px;
                 border: none;
                 -webkit-text-stroke: 2px black; /* width and color */
             }
