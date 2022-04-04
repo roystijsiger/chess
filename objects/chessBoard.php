@@ -118,14 +118,10 @@ class ChessBoard{
 
        
 
-        try{
-            $response = $client->request('GET', 'cloud-eval',[
-                'body' => json_encode('{"fen": '.$FEN.'}')
-            ]);
-            var_dump($response->getBody());
-        }
-        catch(ClientException $e){
-            var_dump($e);
-        }
+        $response = $client->request('GET', 'cloud-eval',[
+            'body' => json_encode('{"fen": '.$FEN.'}')
+        ]);
+        var_dump($response->getBody());
+       
     }
 }
