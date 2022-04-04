@@ -116,10 +116,10 @@ class ChessBoard{
             'timeout' => 2.0
         ]);
 
-       
+        $json = '{"fen": "' . $FEN . '"}';
 
         $response = $client->request('GET', 'cloud-eval',[
-            'body' => json_encode('{"fen": '.$FEN.'}')
+            'body' => $json
         ]);
         var_dump($response->getBody());
        
