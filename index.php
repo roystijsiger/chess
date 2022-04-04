@@ -24,6 +24,6 @@ echo "FEN notatie: {$chessBoard->GetFENNotation()}";
 echo "<h1>Analysis</h1>";
 
 $analysis = $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
-var_dump($analysis);die;
+echo "best moves: " . $analysis->pvs[0]->moves;
 
 require_once './template/bottom.php';
