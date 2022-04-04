@@ -71,7 +71,6 @@ class ChessBoard{
                             $FEN .= "{$amountOfNothingFound}{$letter}";
                         }
                     }
-                    $amountOfNothingFound++;
                 }
 
                 if($file == "H")
@@ -82,6 +81,9 @@ class ChessBoard{
                     
                     $FEN .= "/";
                 }
+
+
+                $amountOfNothingFound++;
             }
         }
         return $FEN;
