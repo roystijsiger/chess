@@ -1,4 +1,8 @@
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 namespace chess;
 require_once './template/top.php';
 require_once './objects/piece.php';
@@ -47,5 +51,6 @@ $rook1->move("A5");
 
 $chessBoard->Draw();
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";
+echo "<h1>Analysis</h1>";
 $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
 require_once './template/bottom.php';
