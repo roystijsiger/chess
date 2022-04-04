@@ -11,19 +11,19 @@
             }
 
             tr:nth-child(odd) > td:nth-child(odd){
-                background-color: white;
+                background-color: #eeeed2;
             }
 
             tr:nth-child(odd) > td:nth-child(even){
-                background-color: grey;
+                background-color: #769656;
             }
 
             tr:nth-child(even) > td:nth-child(odd){
-                background-color: grey;
+                background-color: #769656;
             }
 
             tr:nth-child(even) > td:nth-child(even){
-                background-color: white;
+                background-color: #eeeed2;
             }
         </style>
     </head>
