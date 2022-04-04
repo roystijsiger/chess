@@ -114,8 +114,10 @@ class ChessBoard{
             'timeout' => 2.0
         ]);
 
-        $client->request('GET', 'cloud-eval',[
+        $response = $client->request('GET', 'cloud-eval',[
             'body' => json_encode('{"fen": $FEN}')
         ]);
+
+        var_dump($response); die;
     }
 }
