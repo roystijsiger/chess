@@ -20,6 +20,8 @@ $chessBoard->move("Horse","B1", "C3");
 $chessBoard->move("Horse","B8", "A6");
 
 //$chessBoard->Draw();
+$chessBoard->Draw();
+echo "<h1>FEN notation</h1>";
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";
 echo "<h1>Analysis</h1>";
 $analysis = $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
