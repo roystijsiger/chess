@@ -12,7 +12,6 @@ class ChessBoard{
         echo "<table>";
         foreach($ranks as $rank){
             echo "<tr style='background-color:green; width: 50px; height: 50px'>";
-            echo $rank;
             foreach($this->_files as $file){
                 $pieceFound = false;
                 echo "<td>";
@@ -45,7 +44,7 @@ class ChessBoard{
                     }
                 }
                 if(!$pieceFound){
-                    echo "{$file}{$rank}: No piece";
+                    echo "{$file}{$rank}";
                 }
                 echo "</td>";
             }
