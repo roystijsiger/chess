@@ -86,20 +86,21 @@ class ChessBoard{
                     }
                 }
 
+                if(!$nothingFoundReset){
+                    $amountOfNothingFound++;        
+                }
+
                 if($file == "H")
                 {
                     if($amountOfNothingFound > 0){
                        $FEN .= $amountOfNothingFound;
                        $amountOfNothingFound = 0;
-                       $nothingFoundReset = true;
                     }
                     
                     $FEN .= "/";
                 }
                 
-                if(!$nothingFoundReset){
-                    $amountOfNothingFound++;        
-                }
+                
             }
         }
         return $FEN;
