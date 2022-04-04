@@ -2,6 +2,10 @@
 <html>
     <head>
         <style type="text/css">
+            table{
+                border:none;
+            }
+            
             td{
                 width: 100px;
                 height: 100px;
