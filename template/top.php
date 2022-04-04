@@ -2,9 +2,6 @@
 <html>
     <head>
         <style type="text/css">
-            *{
-            }
-
             td{
                 width: 100px;
                 height: 100px;
@@ -18,12 +15,12 @@
             }
 
             tr:nth-child(odd) > td:nth-child(even){
-                background-color: black;
+                background-color: grey;
                 color: white;
             }
 
             tr:nth-child(even) > td:nth-child(odd){
-                background-color: black;
+                background-color: grey;
                 color: white;
             }
 
