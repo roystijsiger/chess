@@ -66,6 +66,7 @@ class ChessBoard{
                             if($piece->Name == "Knight"){
                                 $letter = "N";
                             }
+                            $letter = $piece->Name[0];
 
                             $FEN .= "{$amountOfNothingFound}{$letter}";
                         }
