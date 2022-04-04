@@ -40,8 +40,8 @@ $pawn14 = new piece("pawn", "F7", "black");
 $pawn15 = new piece("pawn", "G7", "black");
 $pawn16 = new piece("pawn", "H7", "black");
 
-$chessBoard->Pieces = [$rook1,$rook2,$rook3,$rook4,$horse1,$horse2,$horse3,$horse4,$bishop1,$bisshop2,$bisshop3,$bisshop4,$king1,$king2,$queen1,$queen2,$pawn1,$pawn2,$pawn3,$pawn4,$pawn5,$pawn6, $pawn7, $pawn8, $pawn9,$pawn10,$pawn11,$pawn12,$pawn13,$pawn14,$pawn15,$pawn16];
-$horse1->move("D2");
+$chessBoard->Pieces = [$rook1,$rook2,$rook3,$rook4,$horse1,$horse2,$horse3,$horse4,$bishop1,$bishop2,$bishop3,$bishop4,$king1,$king2,$queen1,$queen2,$pawn1,$pawn2,$pawn3,$pawn4,$pawn5,$pawn6, $pawn7, $pawn8, $pawn9,$pawn10,$pawn11,$pawn12,$pawn13,$pawn14,$pawn15,$pawn16];
+$horse1->move("C3");
 
 $chessBoard->Draw();
 
