@@ -70,10 +70,10 @@ class ChessBoard{
                     if($piece->Position == $position){
                         if($amountOfNothingFound > 0){
                             $FEN .= "{$amountOfNothingFound}";
-                            $amountOfNothingFound = 0;
-                            $nothingFoundReset = true;
                         }
                         $FEN .= $letter;
+                        $amountOfNothingFound = 0;
+                        $nothingFoundReset = true;
                     }
                 }
 
