@@ -46,5 +46,5 @@ $horse3->move("A6");
 $rook1->move("A5");
 
 $chessBoard->Draw();
-
+echo $chessBoard->GetFENNotation();
 require_once './template/bottom.php';

@@ -53,4 +53,36 @@ class ChessBoard{
         }
         echo "</table>";
     }
+
+    public function GetFENNotation(){
+        $FEN = "";
+        foreach($this->_ranks as $rank){
+            $amountOfNothingFound = 0;
+            foreach($this->_files as $file){
+                $position = $file . $rank;
+                foreach($this->Pieces as $piece){
+                    if($piece->Position == $position){
+                        if($amountOfNothingFound > 0){
+                            if($piece->Name == "Knight"){
+                                $letter = "N";
+                            }
+
+                            $FEN .= "{$amountOfNothingFound}{$letter}";
+                        }
+                    }
+                    $amountOfNothingFound++;
+                }
+
+                if($file == "H")
+                {
+                    if($amountOfNothingFound > 0){
+                       $FEN .= $amountOfNothingFound;
+                    }
+                    
+                    $FEN .= "/";
+                }
+            }
+        }
+        return $FEN;
+    }
 }
