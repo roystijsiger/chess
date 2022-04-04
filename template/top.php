@@ -16,12 +16,10 @@
 
             tr:nth-child(odd) > td:nth-child(even){
                 background-color: grey;
-                color: white;
             }
 
             tr:nth-child(even) > td:nth-child(odd){
                 background-color: grey;
-                color: white;
             }
 
             tr:nth-child(even) > td:nth-child(even){
