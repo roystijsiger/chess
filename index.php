@@ -44,7 +44,6 @@ $pawn16 = new piece("pawn", "H7", "black");
 $chessBoard->Pieces = [$rook1,$rook2,$rook3,$rook4,$horse1,$horse2,$horse3,$horse4,$bishop1,$bishop2,$bishop3,$bishop4,$king1,$king2,$queen1,$queen2,$pawn1,$pawn2,$pawn3,$pawn4,$pawn5,$pawn6, $pawn7, $pawn8, $pawn9,$pawn10,$pawn11,$pawn12,$pawn13,$pawn14,$pawn15,$pawn16];
 $horse1->move("C3");
 $horse3->move("A6");
-$rook1->move("A5");
 
 $chessBoard->Draw();
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";
