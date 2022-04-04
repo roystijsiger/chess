@@ -45,7 +45,7 @@ $chessBoard->Pieces = [$rook1,$rook2,$rook3,$rook4,$horse1,$horse2,$horse3,$hors
 $horse1->move("C3");
 $horse3->move("A6");
 
-$chessBoard->Draw();
+//$chessBoard->Draw();
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";
 echo "<h1>Analysis</h1>";
 $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
