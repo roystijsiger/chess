@@ -55,8 +55,9 @@ class ChessBoard{
     }
 
     public function GetFENNotation(){
+        $ranks = array_reverse($this->_ranks);
         $FEN = "";
-        foreach($this->_ranks as $rank){
+        foreach($ranks as $rank){
             $amountOfNothingFound = 0;
             foreach($this->_files as $file){
                 $nothingFoundReset = false;
