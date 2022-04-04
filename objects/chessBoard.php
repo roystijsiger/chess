@@ -14,11 +14,16 @@ class ChessBoard{
             echo "<tr style='background-color:green; width: 50px; height: 50px'>";
             echo $rank;
             foreach($this->_files as $file){
+                echo "<td>";
                 foreach($this->Pieces as $piece){
                     if($piece->position == $file . $rank){
                         echo $piece->name;
                     }
+                    else{
+                        echo "no piece";
+                    }
                 }
+                echo "</td>";
             }
             echo "</tr>";
         }
