@@ -22,7 +22,6 @@ $chessBoard->move("Horse","B8", "A6");
 //$chessBoard->Draw();
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";
 echo "<h1>Analysis</h1>";
-
 $analysis = $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
 echo "best moves: " . $analysis->pvs[0]->moves;
 

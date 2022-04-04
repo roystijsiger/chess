@@ -117,7 +117,7 @@ class ChessBoard{
             'timeout' => 2.0
         ]);
 
-        $response = $client->request('GET', "cloud-eval?fen={$FEN}");
+        $response = $client->request('GET', "cloud-eval?fen={$FEN}&multiPv=5");
         
         return json_decode($response->getBody());
        
