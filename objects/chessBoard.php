@@ -62,7 +62,7 @@ class ChessBoard{
                 $nothingFoundReset = false;
                 $position = $file . $rank;
                 foreach($this->Pieces as $piece){
-                    if($piece->Name == "Knight"){
+                    if($piece->Name == "knight"){
                         $letter = "N";
                     }
                     $letter = $piece->Name[0];
