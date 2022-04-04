@@ -24,11 +24,11 @@
 
             tr:nth-child(even) > td:nth-child(odd){
                 background-color: black;
+                color: white;
             }
 
             tr:nth-child(even) > td:nth-child(even){
                 background-color: white;
-                color: white;
             }
         </style>
     </head>
