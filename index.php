@@ -16,7 +16,8 @@ $chessBoard = new ChessBoard();
 
 
 $chessBoard->SetStart();
-$chessBoard->move("Horse","A2", "C3");
+$chessBoard->move("Horse","B1", "C3");
+$chessBoard->move("Horse","B8", "A6");
 
 //$chessBoard->Draw();
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";

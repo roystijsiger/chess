@@ -203,6 +203,7 @@ class ChessBoard{
             elseif($move['name'] == 'pawn'){
                 return $amountOfMoves;
             }
+            $amountOfMoves++;
         }
         return $amountOfMoves;
     }
