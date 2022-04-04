@@ -1,5 +1,6 @@
 <?php
 namespace chess;
+use GuzzleHttp\Client;
 
 class ChessBoard{
     public $Pieces = [];
@@ -105,5 +106,16 @@ class ChessBoard{
             }
         }
         return $FEN;
+    }
+
+    public function GetAnalysis($FEN){
+        $client = new Client([
+            'base_uri' => 'https://lichess.org/api/',
+            'timeout' => 2.0
+        ]);
+
+        $client->request('GET', 'cloud-eval',[
+            'body' => json_encode('{"fen": $FEN}')
+        ]);
     }
 }

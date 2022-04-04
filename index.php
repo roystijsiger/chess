@@ -47,4 +47,5 @@ $rook1->move("A5");
 
 $chessBoard->Draw();
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";
+$chessBoard->GetAnalysis($chessBoard->GetFENNotation());
 require_once './template/bottom.php';
