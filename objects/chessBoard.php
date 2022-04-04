@@ -19,7 +19,7 @@ class ChessBoard{
                 foreach($this->Pieces as $piece){
                     if($piece->position == $file . $rank){
                         $pieceFound = true;
-                        echo "{$file}{$rank}: {$piece->Name}";
+                    echo "{$file}{$rank}: {$piece->Name}";
                         break;
                     }
                 }

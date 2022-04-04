@@ -2,24 +2,24 @@
 namespace chess;
 
 class piece{
-    public $name;
-    public $position;
-    public $color;
+    public $Name;
+    public $Position;
+    public $Color;
 
     private $_ranks = array(1,2,3,4,5,6,7,8);
     private $_files = array('A','B','C','D','E','F','G','H');
 
     function __construct($name, $position, $color){
-        $this->name = $name;
-        $this->position = $position;
-        $this->color = $color;
+        $this->Name = $name;
+        $this->Position = $position;
+        $this->Color = $color;
     }
 
     public function move($pos){
         //This is the current position before moving.
-        $currentFile = $this->position[0];
+        $currentFile = $this->Position[0];
         $currentFileIndex = array_search($currentFile, $this->_files);
-        $currentRank = $this->position[1];
+        $currentRank = $this->Position[1];
         $currentRankIndex = array_search($currentRank,  $this->_ranks);
         $goToFileIndex = array_search($pos[0], $this->_files);
         $goToRankIndex = array_search($pos[1],  $this->_ranks);
@@ -32,11 +32,11 @@ class piece{
             die("The piece didnt move trollolololol");
         }
 
-        switch($this->name){
+        switch($this->Name){
             case "rook":
                 $validation = $this->rookValidation($goToFileIndex,$currentFileIndex,$goToRankIndex,$currentRankIndex);
                 if($goToFileIndex == $currentFileIndex || $goToRankIndex == $currentRankIndex){
-                    $this->position = $pos;    
+                    $this->Position = $pos;    
                 }
                 else{
                     die("Invalid rook move :(");
@@ -46,7 +46,7 @@ class piece{
             case "knight":
                 $validation = $this->knightValidation($goToFileIndex,$currentFileIndex,$goToRankIndex,$currentRankIndex);
                 if($validation){
-                    $this->position = $pos;
+                    $this->Position = $pos;
                 }
                 else{
                     die("Invalid knight move :( ");
@@ -55,25 +55,25 @@ class piece{
             case "queen":
                 $validation = $this->queenValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex);
                 if($validation){
-                   $this->position = $pos;
+                   $this->Position = $pos;
                 }                
                 break;
             case "king":
                 $validation = $this->kingValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex);
                 if($validation){
-                   $this->position = $pos;
+                   $this->Position = $pos;
                 }                
                 break;
             case "pawn":
                 $validation = $this->pawnValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex);
                 if($validation){
-                   $this->position = $pos;
+                   $this->Position = $pos;
                 }                
                 break;
             case "bishop":
                 $validation = $this->bishopValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex);
                 if($validation){
-                   $this->position = $pos;
+                   $this->Position = $pos;
                 }                
                 break;
         }
@@ -127,11 +127,11 @@ class piece{
     private function pawnValidation($goToFileIndex,$currentFileIndex,$goToRankIndex, $currentRankIndex){
 
         //white moves forward, black moves backwards (: 
-        if(($this->color == "white" && $goToRankIndex + 1) || ($this->color == "black" && $goToRankIndex - 1)){
+        if(($this->Color == "white" && $goToRankIndex + 1) || ($this->Color == "black" && $goToRankIndex - 1)){
             //normal pawn move]
             return true;
         }
-        elseif(($goToRankIndex + 2 && $currentRankIndex == 1 && $this->color == "white") || ($goToRankIndex -2 && $currentRankIndex == 6 && $this->color == "black")){
+        elseif(($goToRankIndex + 2 && $currentRankIndex == 1 && $this->Color == "white") || ($goToRankIndex -2 && $currentRankIndex == 6 && $this->Color == "black")){
             return true;
         }
         else{
@@ -139,7 +139,7 @@ class piece{
         }
 
         //TO-DO: Check for captures
-        if(($this->color == "white" && $goToRankIndex == 7) || ($this->color == "black" && $goToRankIndex == 0)){
+        if(($this->Color == "white" && $goToRankIndex == 7) || ($this->Color == "black" && $goToRankIndex == 0)){
             //TO-DO: Choose piece
         }
 
