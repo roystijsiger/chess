@@ -59,18 +59,21 @@ class ChessBoard{
         foreach($this->_ranks as $rank){
             $amountOfNothingFound = 0;
             foreach($this->_files as $file){
+                $nothingFoundReset = false;
                 $position = $file . $rank;
                 foreach($this->Pieces as $piece){
+                    if($piece->Name == "Knight"){
+                        $letter = "N";
+                    }
+                    $letter = $piece->Name[0];
+
                     if($piece->Position == $position){
                         if($amountOfNothingFound > 0){
-                            if($piece->Name == "Knight"){
-                                $letter = "N";
-                            }
-                            $letter = $piece->Name[0];
-
-                            $FEN .= "{$amountOfNothingFound}{$letter}";
+                            $FEN .= "{$amountOfNothingFound}";
                             $amountOfNothingFound = 0;
+                            $nothingFoundReset = true;
                         }
+                        $FEN .= $letter;
                     }
                 }
 
@@ -79,13 +82,15 @@ class ChessBoard{
                     if($amountOfNothingFound > 0){
                        $FEN .= $amountOfNothingFound;
                        $amountOfNothingFound = 0;
+                       $nothingFoundReset = true;
                     }
                     
                     $FEN .= "/";
                 }
-
-
-                $amountOfNothingFound++;
+                
+                if(!$nothingFoundReset){
+                    $amountOfNothingFound++;        
+                }
             }
         }
         return $FEN;
