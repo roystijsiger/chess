@@ -8,6 +8,8 @@
                 text-align: center;
                 vertical-align: center;
                 font-size: 50px;
+                border: none;
+                -webkit-text-stroke: 2px black; /* width and color */
             }
 
             tr:nth-child(odd) > td:nth-child(odd){
