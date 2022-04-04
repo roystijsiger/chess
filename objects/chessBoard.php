@@ -134,7 +134,7 @@ class ChessBoard{
         ];
 
         foreach($this->Pieces as $piece){
-            if($piece->Location == $from){
+            if($piece->Position == $from){
                 $piece->Move($to);
             }
         }
