@@ -19,6 +19,27 @@ class ChessBoard{
                 foreach($this->Pieces as $piece){
                     if($piece->Position == $file . $rank){
                         $pieceFound = true;
+                        switch($piece->Name){
+                            case "rook":
+                                echo $piece->Color == "white" ? "&#9814;" : "&#9820;";
+                                break;
+                            case "bishop":
+                                echo $piece->Color == "white" ? "&#9815;" : "&#9821;";
+                                break;
+                            case "knight":
+                                echo $piece->Color == "white" ? "&#9816;" : "&#9822;";
+                                break;
+                            case "queen":
+                                echo $piece->Color == "white" ? "&#9813;" : "&#9819;";
+                                break;
+                            case "king":
+                                echo $piece->Color == "white" ? "&#9812;" : "&#9818;";
+                                break;
+                            case "pawn": 
+                                echo $piece->Color == "white" ? "&#9817;" : "&#9823;";
+                                break;
+
+                        }
                     echo "{$file}{$rank}: {$piece->Name}";
                         break;
                     }

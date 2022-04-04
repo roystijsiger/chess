@@ -1,6 +1,6 @@
 <?php 
 namespace chess;
-
+require_once './template/top.php';
 require_once './objects/piece.php';
 require_once './objects/chessBoard.php';
 
@@ -16,3 +16,5 @@ $chessBoard->Pieces[] = $pawn;
 $horse->move("D2");
 
 $chessBoard->Draw();
+
+require_once './template/bottom.php';
