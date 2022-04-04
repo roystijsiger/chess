@@ -39,7 +39,6 @@ class ChessBoard{
                                 break;
 
                         }
-                    echo "{$file}{$rank}: {$piece->Name}";
                         break;
                     }
                 }

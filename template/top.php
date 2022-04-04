@@ -3,12 +3,14 @@
     <head>
         <style type="text/css">
             *{
-                font-size: 70px;
             }
 
             td{
                 width: 100px;
                 height: 100px;
+                text-align: center;
+                vertical-align: center;
+                font-size: 50px;
             }
 
             tr:nth-child(odd) > td:nth-child(odd){
