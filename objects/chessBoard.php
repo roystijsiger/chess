@@ -118,6 +118,6 @@ class ChessBoard{
             'body' => json_encode('{"fen": $FEN}')
         ]);
 
-        var_dump($response); die;
+        var_dump($response->getBody()); die;
     }
 }
