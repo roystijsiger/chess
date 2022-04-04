@@ -23,7 +23,6 @@ $chessBoard->move("Horse","B8", "A6");
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";
 echo "<h1>Analysis</h1>";
 
-$fenComplete = "{$chessBoard->GetFENNotation()} w KQkq - 0 2";
 $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
 
 require_once './template/bottom.php';
