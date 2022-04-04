@@ -69,6 +69,7 @@ class ChessBoard{
                             $letter = $piece->Name[0];
 
                             $FEN .= "{$amountOfNothingFound}{$letter}";
+                            $amountOfNothingFound = 0;
                         }
                     }
                 }
@@ -77,6 +78,7 @@ class ChessBoard{
                 {
                     if($amountOfNothingFound > 0){
                        $FEN .= $amountOfNothingFound;
+                       $amountOfNothingFound = 0;
                     }
                     
                     $FEN .= "/";
