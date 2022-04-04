@@ -18,7 +18,7 @@ class ChessBoard{
                     if($piece->Position == $file . $rank){
                         $pieceFound = true;
 
-                        echo "<td color='{$piece->Color}'>";
+                        echo "<td style='color: {$piece->Color}' color='{$piece->Color}'>";
                         switch($piece->Name){
                             case "rook":
                                 echo "&#9820;";
