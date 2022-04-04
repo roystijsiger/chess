@@ -23,6 +23,9 @@ $chessBoard->move("Horse","B8", "A6");
 echo "FEN notatie: {$chessBoard->GetFENNotation()}";
 echo "<h1>Analysis</h1>";
 
-$chessBoard->GetAnalysis($chessBoard->GetFENNotation());
+$analysis = $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
+foreach($analysis['pvs'] as $pvs){
+    var_dump($pvs);
+}
 
 require_once './template/bottom.php';

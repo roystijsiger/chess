@@ -118,7 +118,8 @@ class ChessBoard{
         ]);
 
         $response = $client->request('GET', "cloud-eval?fen={$FEN}");
-        echo $response->getBody();
+        
+        return json_decode($response->getBody());
        
     }
     public function Move($name, $from, $to){
