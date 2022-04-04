@@ -24,7 +24,7 @@ echo "FEN notatie: {$chessBoard->GetFENNotation()}";
 echo "<h1>Analysis</h1>";
 
 $analysis = $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
-foreach($analysis['pvs'] as $pvs){
+foreach($analysis->pvs] as $pvs){
     var_dump($pvs);
 }
 
