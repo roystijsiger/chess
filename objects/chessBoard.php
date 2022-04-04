@@ -21,22 +21,22 @@ class ChessBoard{
                         echo "<td color='{$piece->Color}'>";
                         switch($piece->Name){
                             case "rook":
-                                echo $piece->Color == "white" ? "&#9814;" : "&#9820;";
+                                echo "&#9820;";
                                 break;
                             case "bishop":
-                                echo $piece->Color == "white" ? "&#9815;" : "&#9821;";
+                                echo "&#9821;";
                                 break;
                             case "knight":
-                                echo $piece->Color == "white" ? "&#9816;" : "&#9822;";
+                                echo  "&#9822;";
                                 break;
                             case "queen":
-                                echo $piece->Color == "white" ? "&#9813;" : "&#9819;";
+                                echo "&#9819;";
                                 break;
                             case "king":
-                                echo $piece->Color == "white" ? "&#9812;" : "&#9818;";
+                                echo "&#9818;";
                                 break;
                             case "pawn": 
-                                echo $piece->Color == "white" ? "&#9817;" : "&#9823;";
+                                echo "&#9823;";
                                 break;
 
                         }
