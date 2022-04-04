@@ -24,9 +24,12 @@ echo "FEN notatie: {$chessBoard->GetFENNotation()}";
 echo "<h1>Analysis</h1>";
 $analysis = $chessBoard->GetAnalysis($chessBoard->GetFENNotation());
 
+Lines: 
+echo "<ul>";
 foreach($analysis->pvs as $moveVariation){
-    echo "line: " . $moveVariation->moves;
+    echo "<li>" . $moveVariation->moves . "</li>";
 }
+echo "</ul>"
 //echo "best moves: " . $analysis->pvs[0]->moves;
 
 require_once './template/bottom.php';
