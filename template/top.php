@@ -13,7 +13,6 @@
                 vertical-align: center;
                 font-size: 45px;
                 border: none;
-                -webkit-text-stroke: 2px black; /* width and color */
             }
 
             tr:nth-child(odd) > td:nth-child(odd){
