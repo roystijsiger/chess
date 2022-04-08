@@ -18,6 +18,7 @@ $chessBoard = new ChessBoard();
 $chessBoard->SetStart();
 $chessBoard->move("Horse","B1", "C3");
 $chessBoard->move("Horse","B8", "A6");
+$chessBoard->move("Pawn", "A2", "A4");
 
 //$chessBoard->Draw();
 $chessBoard->Draw();
@@ -32,6 +33,4 @@ foreach($analysis->pvs as $moveVariation){
     echo "<li>" . $moveVariation->moves . " eval: ". $moveVariation->cp / 100 . "</li>";
 }
 echo "</ul>";
-//echo "best moves: " . $analysis->pvs[0]->moves;
-
 require_once './template/bottom.php';
